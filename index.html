@@ -6,9 +6,14 @@
     <title>Virtual Vacation</title>
     <!--link to Bulma-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./style.css">
     <script src = "https://use.fontawesome.com/releases/v5.1.0/js/all.js"></script>
     <script src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC3OK-Ci22b2Pq7g3zj5oTYU0Vq9TF-Ork&callback=initMap&libraries=&v=weekly"
+      defer
+    ></script>
 </head>
 <body>
     <!--include search bar somewhere on top of the page-->
@@ -28,10 +33,7 @@
         </div>
         <div class="notification is-primary">
             <div class="card">
-                <div class="card-image">
-                  <figure class="image is-4by3">
-                    <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder for location image">
-                  </figure>
+                <div id="map" class="card-image">
                 </div>
                 <div class="card-content">
                   <div class="media">
@@ -73,6 +75,6 @@
 <!--using ajax for APIs-->
 <script type="text/javascript">
 </script>
-<script src="script.js"></script>      
+<script src="./script.js"></script>      
 </body>
 </html>

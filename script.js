@@ -16,10 +16,20 @@
 
 */
 
-// user enters a city name - then map is loaded on the screen of the destination, lets look into google API. try to have it auto fill Suggestions for the city.
+// user enters a city name - then map is loaded on the screen of the destination, lets look into google API. try to have it auto fill Suggestions for the city.  goole map API key = AIzaSyC3OK-Ci22b2Pq7g3zj5oTYU0Vq9TF-Ork
+
+let map = google.maps.Map;
+
+function initMap() {
+  map = new google.maps.Map(document.getElementById("map"), {
+    center: { lat: -34.397, lng: 150.644 },
+    zoom: 8,
+  });
+}
 
 // weather button - we will need to link the weather API to the button and grab the city name from the search info to display weather 
 
 // Restaurant button - we will need to link the Restaurant  API to the button and grab the city name from the search info to display Restaurant info
 
 // hotel button - we will need to link the hotel  API to the button and grab the city name from the search info to display hotel info
+
