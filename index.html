@@ -56,16 +56,64 @@
                 <footer class="card-footer">
                     <div class="buttons are-large">
                        <div class = "column">
-                        <button class="button is-primary is-fullwidth is-rounded" href="#" class="card-footer-item">Weather</button>
+                        <button class="button is-primary is-fullwidth is-rounded" id="temp" href="#" class="card-footer-item">Weather</button>
                        </div>
                        <div class="column">
-                        <button class="button is-primary is-fullwidth is-rounded" href="#" class="card-footer-item">Places to Eat</button>
+                        <button class="button is-primary is-fullwidth is-rounded" id="food" href="#" class="card-footer-item">Places to Eat</button>
                        </div>
                        <div class="column">
-                        <button class="button is-primary is-fullwidth is-rounded" href="#" class="card-footer-item">Places to Stay</button>
+                        <button class="button is-primary is-fullwidth is-rounded" id="places" href="#" class="card-footer-item">Places to Stay</button>
                        </div>
                     </div> 
                 </footer>
+                <div class="modal" id="restaurant">
+                    <div class="modal-background"></div>
+                    <div class="modal-card">
+                      <header class="modal-card-head">
+                        <h1 class="modal-card-title">Local Restaurants</h1>
+                        <button class="delete" aria-label="close"></button>
+                      </header>
+                      <section class="modal-card-body">
+                        <!-- Content ... -->
+                        <p class="food-info"> This will contain information on restaurants.</p>
+                      </section>
+                      <footer class="modal-card-foot">
+                        <button class="button is-success">OK</button>
+                      </footer>
+                    </div>
+                </div>
+                <div class="modal" id="hotels">
+                    <div class="modal-background"></div>
+                    <div class="modal-card">
+                      <header class="modal-card-head">
+                        <h1 class="modal-card-title">Hotels</h1>
+                        <button class="delete" aria-label="close"></button>
+                      </header>
+                      <section class="modal-card-body">
+                        <!-- Content ... -->
+                        <p class="food-info"> This will contain information on hotels.</p>
+                      </section>
+                      <footer class="modal-card-foot">
+                        <button class="button is-success">OK</button>
+                      </footer>
+                    </div>
+                </div>
+                <div class="modal" id="weather">
+                    <div class="modal-background"></div>
+                    <div class="modal-card">
+                      <header class="modal-card-head">
+                        <h1 class="modal-card-title">Weather</h1>
+                        <button class="delete" aria-label="close"></button>
+                      </header>
+                      <section class="modal-card-body">
+                        <!-- Content ... -->
+                        <p class="food-info"> This will contain information on weather.</p>
+                      </section>
+                      <footer class="modal-card-foot">
+                        <button class="button is-success">OK</button>
+                      </footer>
+                    </div>
+                </div>
               </div>
         </div>
     </div>
