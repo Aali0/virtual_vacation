@@ -10,10 +10,10 @@
     <script src = "https://use.fontawesome.com/releases/v5.1.0/js/all.js"></script>
     <script src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
-    <script
+    <!-- <script
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC3OK-Ci22b2Pq7g3zj5oTYU0Vq9TF-Ork&callback=initMap&libraries=&v=weekly"
       defer
-    ></script>
+    ></script> -->
 </head>
 <body>
     <!--include search bar somewhere on top of the page-->
@@ -25,7 +25,7 @@
         <br>
         <div class="field">
             <div class="control">
-              <input class="input is-primary" type="text" placeholder="Take me there!">
+              <input id="searchInput" class="input is-primary" type="text" placeholder="Take me there!">
                 <button class="button is-black" id="search" type="submit">
                  Go!
                 </button>
@@ -43,8 +43,8 @@
                       </figure>
                     </div>
                     <div class="media-content">
-                      <p class="title is-4">City Name</p>
-                      <p class="subtitle is-6">Country Name</p>
+                      <p id="city-name" class="title is-4"></p>
+                      <p class="subtitle is-6"></p>
                     </div>
                   </div>
               
@@ -107,9 +107,9 @@
                         <h1 class="modal-card-title">Weather</h1>
                         <button class="delete" aria-label="close"></button>
                       </header>
-                      <section class="modal-card-body">
+                      <section id="weather-content" class="modal-card-body">
                         <!-- Content ... -->
-                        <p class="food-info"> This will contain information on weather.</p>
+
                       </section>
                       <footer class="modal-card-foot">
                         <button class="button is-success">OK</button>
