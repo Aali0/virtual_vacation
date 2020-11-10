@@ -68,3 +68,8 @@ document.querySelector('#food').addEventListener('click', function(event) {
     });
   });
 
+//close button will close modal  
+document.querySelector('.delete').addEventListener("click", function(){
+    var close = document.querySelector(".modal")
+    close.close();
+})
