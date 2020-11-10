@@ -99,7 +99,7 @@ document.querySelector('#food').addEventListener('click', function(event) {
       modal.classList.remove('is-active');
       html.classList.remove('is-clipped');
     });
-    //OK button will close modal
+    //OK button will close modal 
     modal.querySelector('#ok').addEventListener('click', function(e) {
         e.preventDefault();
         modal.classList.remove('is-active');
