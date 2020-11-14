@@ -77,13 +77,17 @@ function searchCity(city) {
       $("#food-content").append(restaurantName, restaurantCost, restaurantCuisines, restaurantAddress, restaurantRating, restaurantName2, restaurantCost2, restaurantCuisines2, restaurantAddress2, restaurantRating2, restaurantName3, restaurantCost3, restaurantCuisines3, restaurantAddress3, restaurantRating3);
     });
 
-    // var query3 = "blah";
-    // $.ajax({
-    //   url: query3,
-    //   method: "GET",
-    // }).then(function(response3) {
-    //   console.log(response3);
-    // })
+    var photoURL = "https://api.unsplash.com/search/photos?page=1&query=office"
+
+    $.ajax({
+      url: photoURL,
+      method: "GET",
+    }).then(function (photoResponce) {
+      console.log(photoResponce)
+
+      $("#photo-content").empty();
+      $("#photo-content").append("<img src=" + photoResponce[0].urls.small + ">");
+    })
   });
 }
 
