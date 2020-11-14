@@ -66,6 +66,9 @@
                        <div class="column">
                         <button class="button is-primary is-fullwidth is-rounded" id="places" href="#" class="card-footer-item">Places to Stay</button>
                        </div>
+                       <div class="column">
+                        <button class="button is-primary is-fullwidth is-rounded" id="sights" href="#" class="card-footer-item">Places to See</button>
+                       </div>
                     </div> 
                 </footer>
                 <div class="modal" id="restaurant">
@@ -73,14 +76,14 @@
                     <div class="modal-card">
                       <header class="modal-card-head">
                         <h1 class="modal-card-title">Local Restaurants</h1>
-                        <button class="delete" aria-label="close"></button>
+      
                       </header>
                       <section id="food-content" class="modal-card-body">
                         <!-- Content ... -->
                         
                       </section>
                       <footer class="modal-card-foot">
-                        <button class="button is-success">OK</button>
+                        <button class="button is-success" id="ok">OK</button>
                       </footer>
                     </div>
                 </div>
@@ -89,14 +92,13 @@
                     <div class="modal-card">
                       <header class="modal-card-head">
                         <h1 class="modal-card-title">Hotels</h1>
-                        <button class="delete" aria-label="close"></button>
                       </header>
                       <section class="modal-card-body">
                         <!-- Content ... -->
                         <p class="food-info"> This will contain information on hotels.</p>
                       </section>
                       <footer class="modal-card-foot">
-                        <button class="button is-success">OK</button>
+                        <button class="button is-success" id="ok">OK</button>
                       </footer>
                     </div>
                 </div>
@@ -104,25 +106,51 @@
                     <div class="modal-background"></div>
                     <div class="modal-card">
                       <header class="modal-card-head">
-                        <h1 class="modal-card-title">Weather</h1>
-                        <button class="delete" aria-label="close"></button>
+                        <h1 class="modal-card-title">Weather</h1>      
                       </header>
                       <section id="weather-content" class="modal-card-body">
                         <!-- Content ... -->
 
                       </section>
                       <footer class="modal-card-foot">
-                        <button class="button is-success">OK</button>
+                        <button class="button is-success" id="ok">OK</button>
                       </footer>
                     </div>
+                </div>
+                <div class="modal" id="see">
+                  <div class="modal-background"></div>
+                  <div class="modal-card">
+                    <header class="modal-card-head">
+                      <h1 class="modal-card-title">Places to See</h1>
+                    </header>
+                    <section id="weather-content" class="modal-card-body">
+                      <!-- Content ... -->
+
+                    </section>
+                    <footer class="modal-card-foot">
+                      <button class="button is-success" id="ok">OK</button>
+                    </footer>
+                  </div>
                 </div>
               </div>
         </div>
     </div>
+<script>
+    $(".is-success").click(function() {
+            var target = $(this).data("target");
+            $("html").addClass("is-clipped");
+            $(target).addClass("is-active");
+         });
+         
+         $("#delete").click(function() {
+            $("html").removeClass("is-clipped");
+            $(this).parent().removeClass("is-active");
+         });
+</script>    
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <!--using ajax for APIs-->
 <script type="text/javascript">
 </script>
-<script src="./script.js"></script>      
+<script src="./script.js"></script>       
 </body>
 </html>

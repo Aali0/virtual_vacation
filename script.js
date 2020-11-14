@@ -22,13 +22,14 @@ function searchCity(city) {
   var forcastURL =
     "http://api.openweathermap.org/data/2.5/weather?q=" +
     city +
-    "&units=imperial&appid=44558b94b80d15a7785e0eb77b5845ac";
+    "&units=imperial&appid=44558b94b80d15a7785e0eb77b5845ac";    
+
   $.ajax({
     url: forcastURL,
     method: "GET",
   }).then(function (responce) {
     console.log(responce);
-
+    
     var cityName = $("<h2>").text(responce.name);
     var country = $("<p>").text(responce.sys.country);
     var temp = $("<p>").text("Temperature: " + responce.main.temp + "°F");
@@ -110,13 +111,17 @@ document.querySelector("#food").addEventListener("click", function (event) {
   modal.classList.add("is-active");
   html.classList.add("is-clipped");
   
-  modal
-  .querySelector(".modal-background")
-  .addEventListener("click", function (e) {
-    e.preventDefault();
-    modal.classList.remove("is-active");
-    html.classList.remove("is-clipped");
-  });
+    modal.querySelector('.modal-background').addEventListener('click', function(e) {
+      e.preventDefault();
+      modal.classList.remove('is-active');
+      html.classList.remove('is-clipped');
+    });
+    //OK button will close modal
+    modal.querySelector('#ok').addEventListener('click', function(e) {
+        e.preventDefault();
+        modal.classList.remove('is-active');
+        html.classList.remove('is-clipped');
+   }) 
 });
 
 //launches hotel modal
@@ -127,13 +132,17 @@ document.querySelector("#places").addEventListener("click", function (event) {
   modal.classList.add("is-active");
   html.classList.add("is-clipped");
   
-  modal
-  .querySelector(".modal-background")
-  .addEventListener("click", function (e) {
-    e.preventDefault();
-    modal.classList.remove("is-active");
-    html.classList.remove("is-clipped");
-  });
+    modal.querySelector('.modal-background').addEventListener('click', function(e) {
+      e.preventDefault();
+      modal.classList.remove('is-active');
+      html.classList.remove('is-clipped');
+    });
+    //OK button will close modal 
+    modal.querySelector('#ok').addEventListener('click', function(e) {
+        e.preventDefault();
+        modal.classList.remove('is-active');
+        html.classList.remove('is-clipped');
+   }) 
 });
 
 //launches weather modal
@@ -144,20 +153,41 @@ document.querySelector("#temp").addEventListener("click", function (event) {
   modal.classList.add("is-active");
   html.classList.add("is-clipped");
   
-  modal
-  .querySelector(".modal-background")
-  .addEventListener("click", function (e) {
-    e.preventDefault();
-    modal.classList.remove("is-active");
-    html.classList.remove("is-clipped");
+    modal.querySelector('.modal-background').addEventListener('click', function(e) {
+      e.preventDefault();
+      modal.classList.remove('is-active');
+      html.classList.remove('is-clipped');
+    });
+    //OK button will close modal
+    modal.querySelector('#ok').addEventListener('click', function(e) {
+        e.preventDefault();
+        modal.classList.remove('is-active');
+        html.classList.remove('is-clipped');
+   }) 
   });
-});
 
-//close button will close modal
-document.querySelector(".delete").addEventListener("click", function () {
-  var close = document.querySelector(".modal");
-  close.close();
-});
+  //launches modal for places to see 
+  document.querySelector('#sights').addEventListener('click', function(event) {
+    event.preventDefault();
+    var modal = document.querySelector('#see');  // assuming you have only 1
+    var html = document.querySelector('html');
+    modal.classList.add('is-active');
+    html.classList.add('is-clipped');
+  
+    modal.querySelector('.modal-background').addEventListener('click', function(e) {
+      e.preventDefault();
+      modal.classList.remove('is-active');
+      html.classList.remove('is-clipped');
+    });
+    //OK button will close modal 
+    modal.querySelector('#ok').addEventListener('click', function(e) {
+        e.preventDefault();
+        modal.classList.remove('is-active');
+        html.classList.remove('is-clipped');
+   }) 
+  });
+  
+
 // user enters a city name - then map is loaded on the screen of the destination, lets look into google API. try to have it auto fill Suggestions for the city.  goole map API key = AIzaSyC3OK-Ci22b2Pq7g3zj5oTYU0Vq9TF-Ork
 
 // let map = google.maps.Map;
