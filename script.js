@@ -32,7 +32,7 @@ function searchCity(city) {
     
     var cityName = $("<h2>").text(responce.name);
     var country = $("<p>").text(responce.sys.country);
-    var temp = $("<p>").text("Temperature: " + responce.main.temp + "°F");
+    var temp = $("<p style = 'font-weight: bolder; font-size: xx-large'>").text("Temperature: " + responce.main.temp + "°F");
     var humid = $("<p>").text("Humidity: " + responce.main.humidity + "%");
     var wind = $("<p>").text("Wind Speed: " + responce.wind.speed + "MPH");
 
@@ -55,24 +55,24 @@ function searchCity(city) {
     }).then(function (restaurantResponse) {
       console.log(restaurantResponse);
 
-      var restaurantName = $("<h2>").text(restaurantResponse.restaurants[0].restaurant.name);
+      var restaurantName = $("<h1 style='font-family:fantasy;font-size:xx-large;font-weight:bolder'>").text(restaurantResponse.restaurants[0].restaurant.name);
       var restaurantCost = $("<p>").text("Average cost for two people " + "$" + restaurantResponse.restaurants[0].restaurant.average_cost_for_two);
       var restaurantCuisines = $("<p>").text("Cuisine: " + restaurantResponse.restaurants[0].restaurant.cuisines);
       var restaurantAddress = $("<p>").text("Location: " + restaurantResponse.restaurants[0].restaurant.location.address);
       var restaurantRating = $("<p>").text("Rating: " + restaurantResponse.restaurants[0].restaurant.user_rating.rating_text);
-
-      var restaurantName2 = $("<h2>").text(restaurantResponse.restaurants[1].restaurant.name);
+      
+      var restaurantName2 = $("<h1 style='font-family:fantasy;font-size:xx-large;font-weight:bolder'>").text(restaurantResponse.restaurants[1].restaurant.name);
       var restaurantCost2 = $("<p>").text("Average cost for two people " + "$" + restaurantResponse.restaurants[1].restaurant.average_cost_for_two);
       var restaurantCuisines2 = $("<p>").text("Cuisine: " + restaurantResponse.restaurants[1].restaurant.cuisines);
       var restaurantAddress2 = $("<p>").text("Location: " + restaurantResponse.restaurants[1].restaurant.location.address);
       var restaurantRating2 = $("<p>").text("Rating: " + restaurantResponse.restaurants[1].restaurant.user_rating.rating_text);
-
-      var restaurantName3 = $("<h2>").text(restaurantResponse.restaurants[2].restaurant.name);
+      
+      var restaurantName3 = $("<h1 style='font-family:fantasy;font-size:xx-large;font-weight:bolder'>").text(restaurantResponse.restaurants[2].restaurant.name);
       var restaurantCost3 = $("<p>").text("Average cost for two people " + "$" + restaurantResponse.restaurants[2].restaurant.average_cost_for_two);
       var restaurantCuisines3 = $("<p>").text("Cuisine: " + restaurantResponse.restaurants[2].restaurant.cuisines);
       var restaurantAddress3 = $("<p>").text("Location: " + restaurantResponse.restaurants[2].restaurant.location.address);
       var restaurantRating3 = $("<p>").text("Rating: " + restaurantResponse.restaurants[2].restaurant.user_rating.rating_text);
-
+      
       $("#food-content").empty();
       $("#food-content").append(restaurantName, restaurantCost, restaurantCuisines, restaurantAddress, restaurantRating, restaurantName2, restaurantCost2, restaurantCuisines2, restaurantAddress2, restaurantRating2, restaurantName3, restaurantCost3, restaurantCuisines3, restaurantAddress3, restaurantRating3);
     });
