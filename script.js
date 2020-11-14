@@ -77,7 +77,7 @@ function searchCity(city) {
       $("#food-content").append(restaurantName, restaurantCost, restaurantCuisines, restaurantAddress, restaurantRating, restaurantName2, restaurantCost2, restaurantCuisines2, restaurantAddress2, restaurantRating2, restaurantName3, restaurantCost3, restaurantCuisines3, restaurantAddress3, restaurantRating3);
     });
 
-    var photoURL = "https://api.unsplash.com/search/photos?page=1&query=office"
+    var photoURL = "https://api.unsplash.com/search/photos/?&query=" + city + "&client_id=Ynq6VPbhTookVMwBwrFBeaNvv1He7lpwYKYdGmhnJ4U"
 
     $.ajax({
       url: photoURL,
@@ -85,8 +85,31 @@ function searchCity(city) {
     }).then(function (photoResponce) {
       console.log(photoResponce)
 
+      // var photo1 = $("<img>").text("<img src=" + photoResponce.results[1].urls.small + ">")
+
+      // $("#photo-content").empty();
+      // $("#photo-content").append(photo1)
+
+      $("#thumb-photo").empty();
+      $("#thumb-photo").append("<img src=" + photoResponce.results[0].urls.small + ">");
+    
       $("#photo-content").empty();
-      $("#photo-content").append("<img src=" + photoResponce[0].urls.small + ">");
+      $("#photo-content").append("<img src=" + photoResponce.results[1].urls.small + ">");
+      
+      $("#photo-content").append("<img src=" + photoResponce.results[2].urls.small + ">");
+
+      $("#photo-content").append("<img src=" + photoResponce.results[3].urls.small + ">");
+
+      $("#photo-content").append("<img src=" + photoResponce.results[4].urls.small + ">");
+
+      $("#photo-content").append("<img src=" + photoResponce.results[5].urls.small + ">");
+
+      $("#photo-content").append("<img src=" + photoResponce.results[6].urls.small + ">");
+
+      $("#photo-content").append("<img src=" + photoResponce.results[7].urls.small + ">");
+
+      $("#photo-content").append("<img src=" + photoResponce.results[8].urls.small + ">");
+      
     })
   });
 }
