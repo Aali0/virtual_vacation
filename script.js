@@ -110,6 +110,15 @@ function searchCity(city) {
 
       $("#photo-content").append("<img src=" + photoResponce.results[8].urls.small + ">");
       
+    });
+
+    var hotelURL = "https://priceline-com.p.rapidapi.com/hotels/city/search/?&q=sacramento&rapidapi-key=ce5566d88amshbb3ba3a1f6af0e3p102bf6jsn254577bf996f"
+
+    $.ajax({
+      url: hotelURL,
+      method: "GET",
+    }).then(function (hotelResponce) {
+      console.log(hotelResponce)
     })
   });
 }
