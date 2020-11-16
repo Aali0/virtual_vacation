@@ -22,10 +22,8 @@ THEN I am presented with the last searched city.
 * [OpenWeatherMap](https://openweathermap.org/api) 
 * [Unsplash](https://unsplash.com/developers)
 * [Google Maps Platform](https://cloud.google.com/maps-platform)
+* [Zomato](https://developers.zomato.com/api)
+
 ## Image
 ![Mockup](UCDrepo/Group_6_mockup.jpg)
-### Tasks
-* Christopher - will make the git reposeitory, init CSS layout, post-it for weather API
-* Nicholas - will do the final presentation, post-it for image API, Develop Modals for the API's to pop into
-* Paolo - will work on the resturant post-it API,
-* Ahmed - will work on the google map API for the background, can the search function auto populate city ideas. 
+
