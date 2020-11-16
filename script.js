@@ -72,9 +72,21 @@ function searchCity(city) {
       var restaurantCuisines3 = $("<p>").text("Cuisine: " + restaurantResponse.restaurants[2].restaurant.cuisines);
       var restaurantAddress3 = $("<p>").text("Location: " + restaurantResponse.restaurants[2].restaurant.location.address);
       var restaurantRating3 = $("<p>").text("Rating: " + restaurantResponse.restaurants[2].restaurant.user_rating.rating_text);
+
+      var restaurantName4 = $("<h1 style='font-family:fantasy;font-size:xx-large;font-weight:bolder'>").text(restaurantResponse.restaurants[3].restaurant.name);
+      var restaurantCost4 = $("<p>").text("Average cost for two people " + "$" + restaurantResponse.restaurants[3].restaurant.average_cost_for_two);
+      var restaurantCuisines4 = $("<p>").text("Cuisine: " + restaurantResponse.restaurants[3].restaurant.cuisines);
+      var restaurantAddress4 = $("<p>").text("Location: " + restaurantResponse.restaurants[3].restaurant.location.address);
+      var restaurantRating4 = $("<p>").text("Rating: " + restaurantResponse.restaurants[3].restaurant.user_rating.rating_text);
+
+      var restaurantName5 = $("<h1 style='font-family:fantasy;font-size:xx-large;font-weight:bolder'>").text(restaurantResponse.restaurants[4].restaurant.name);
+      var restaurantCost5 = $("<p>").text("Average cost for two people " + "$" + restaurantResponse.restaurants[4].restaurant.average_cost_for_two);
+      var restaurantCuisines5 = $("<p>").text("Cuisine: " + restaurantResponse.restaurants[4].restaurant.cuisines);
+      var restaurantAddress5 = $("<p>").text("Location: " + restaurantResponse.restaurants[4].restaurant.location.address);
+      var restaurantRating5 = $("<p>").text("Rating: " + restaurantResponse.restaurants[4].restaurant.user_rating.rating_text);
       
       $("#food-content").empty();
-      $("#food-content").append(restaurantName, restaurantCost, restaurantCuisines, restaurantAddress, restaurantRating, restaurantName2, restaurantCost2, restaurantCuisines2, restaurantAddress2, restaurantRating2, restaurantName3, restaurantCost3, restaurantCuisines3, restaurantAddress3, restaurantRating3);
+      $("#food-content").append(restaurantName, restaurantCost, restaurantCuisines, restaurantAddress, restaurantRating, restaurantName2, restaurantCost2, restaurantCuisines2, restaurantAddress2, restaurantRating2, restaurantName3, restaurantCost3, restaurantCuisines3, restaurantAddress3, restaurantRating3, restaurantName4, restaurantCost4, restaurantCuisines4, restaurantAddress4, restaurantRating4, restaurantName5, restaurantCost5, restaurantCuisines5, restaurantAddress5, restaurantRating5);
     });
 
     var photoURL = "https://api.unsplash.com/search/photos/?&query=" + city + "&client_id=Ynq6VPbhTookVMwBwrFBeaNvv1He7lpwYKYdGmhnJ4U"
