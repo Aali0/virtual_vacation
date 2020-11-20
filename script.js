@@ -106,23 +106,23 @@ function searchCity(city) {
       $("#thumb-photo").append("<img src=" + photoResponce.results[0].urls.small + ">");
     
       $("#photo-content").empty();
-      $("#photo-content").append("<img src=" + photoResponce.results[1].urls.small + ">");
+      $("#photo-content").append("<img src=" + photoResponce.results[1].urls.regular + ">");
       
-      $("#photo-content").append("<img src=" + photoResponce.results[2].urls.small + ">");
+      $("#photo-content").append("<img src=" + photoResponce.results[2].urls.regular + ">");
 
-      $("#photo-content").append("<img src=" + photoResponce.results[3].urls.small + ">");
+      $("#photo-content").append("<img src=" + photoResponce.results[3].urls.regular + ">");
 
-      $("#photo-content").append("<img src=" + photoResponce.results[4].urls.small + ">");
+      $("#photo-content").append("<img src=" + photoResponce.results[4].urls.regular + ">");
 
-      $("#photo-content").append("<img src=" + photoResponce.results[5].urls.small + ">");
+      $("#photo-content").append("<img src=" + photoResponce.results[5].urls.regular + ">");
 
-      $("#photo-content").append("<img src=" + photoResponce.results[6].urls.small + ">");
+      $("#photo-content").append("<img src=" + photoResponce.results[6].urls.regular + ">");
 
-      $("#photo-content").append("<img src=" + photoResponce.results[7].urls.small + ">");
+      $("#photo-content").append("<img src=" + photoResponce.results[7].urls.regular + ">");
 
-      $("#photo-content").append("<img src=" + photoResponce.results[8].urls.small + ">");
+      $("#photo-content").append("<img src=" + photoResponce.results[8].urls.regular + ">");
 
-      $("#photo-content").append("<img src=" + photoResponce.results[9].urls.small + ">");
+      $("#photo-content").append("<img src=" + photoResponce.results[9].urls.regular + ">");
       
     });
 
