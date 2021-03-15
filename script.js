@@ -10,14 +10,11 @@
 // 3. Card will contain buttons that will launch modals which will bring up restaurants, hotels, weather info
 // Ajax calls for the local weather and local restaurant info
 function searchCity(city) {
-  // var mapURL = "https://maps.googleapis.com/maps/api/js?key=AIzaSyC3OK-Ci22b2Pq7g3zj5oTYU0Vq9TF-Ork&callback=initMap"
+  // Map was implemented best with a simple embedded google map api bellow
+  var mapURL = "https://www.google.com/maps/embed/v1/search?key=AIzaSyC9D2MVlMCg6HU4M7ZEXjI1zLj_6UAirUs&q=in" + city; 
+  var mapFrame = $('#map-frame');
+  $(mapFrame).attr('src', mapURL);
 
-  // $.ajax({
-  //   url: mapURL,
-  //   method: "GET",
-  // }).then(function (responce) {
-  //   console.log(responce);
-  // });
 
   var forcastURL =
     "http://api.openweathermap.org/data/2.5/weather?q=" +
